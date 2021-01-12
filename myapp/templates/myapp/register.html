@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+  {% load static %}
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="{% static 'myapp/img/fav.png' %}">
+  <!-- Author Meta -->
+  <meta name="author" content="colorlib">
+  <!-- Meta Description -->
+  <meta name="description" content="">
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+  <!-- Site Title -->
+  <title>Register</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="{% static 'myapp/css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/main.css' %}">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!---Include the above in your HEAD tag ---------->
+
+
+  </head>
+  <body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+    <style media="screen">
+    .divider-text {
+  position: relative;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.divider-text span {
+  padding: 7px;
+  font-size: 12px;
+  position: relative;
+  z-index: 2;
+}
+.divider-text:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  top: 55%;
+  left: 0;
+  z-index: 1;
+}
+
+.btn-facebook {
+  background-color: #405D9D;
+  color: #fff;
+}
+.btn-twitter {
+  background-color: #42AEEC;
+  color: #fff;
+}
+    </style>
+    <!-- <header id="header"> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand">Register</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/register">Register <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+      <!-- <div class="header-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div id="logo">
+                  <a href="index.html"><img src="{% static 'myapp/img/logo.png' %}" alt="" title="" /></a>
+                </div>
+            </div>
+        </div>
+      </div> -->
+    </nav>
+
+
+    <div class="card bg-light">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+      <h4 class="card-title mt-3 text-center">Create Account</h4>
+      <p>
+        <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
+      </p>
+      <p class="divider-text">
+            <span class="bg-light">OR</span>
+        </p>
+      <form action="succ/" method="post">
+        {% csrf_token %}
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+         </div>
+            <input name="username" class="form-control" placeholder="Full name" type="text" required>
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+         </div>
+            <input name="email" class="form-control" placeholder="Email address" type="email" required>
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+        </div>
+        <select class="custom-select" style="max-width: 120px;">
+            <option selected="">+91</option>
+        </select>
+          <input name="phone" class="form-control" placeholder="Phone number" type="number" required>
+        </div> <!-- form-group// -->
+
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+            <input name="password" class="form-control" placeholder="Create password" type="password" required>
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+            <input name="confirmpassword" class="form-control" placeholder="Repeat password" type="password" required>
+        </div> <!-- form-group// -->
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+        </div> <!-- form-group// -->
+        <p class="text-center">Already have an account? <a href="/login">Log In</a> </p>
+    </form>
+        <div>
+    {% for message in messages %}
+    <h4> {{message}} </h4>
+    {% endfor %}
+</div>
+    </article>
+    </div> <!-- card.// -->
+
+
+    <br><br>
+
+
+      <div class="footer-bottom-wrap">
+        <div class="container">
+          <div class="row footer-bottom d-flex justify-content-between align-items-center">
+            <p class="col-lg-8 col-mdcol-sm-6 -6 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <ul class="col-lg-4 col-mdcol-sm-6 -6 social-icons text-right">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End footer Area -->
+
+    <script src="{% static 'myapp/js/vendor/jquery-2.2.4.min.js' %}"></script>
+    <script src="{% static 'myapp/js/popper.min.js' %}"></script>
+    <script src="{% static 'myapp/js/vendor/bootstrap.min.js' %}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="{% static 'myapp/js/jquery-ui.js' %}"></script>
+      <script src="{% static 'myapp/js/easing.min.js' %}"></script>
+    <script src="{% static 'myapp/js/hoverIntent.js' %}"></script>
+    <script src="{% static 'myapp/js/superfish.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'myapp/js/owl.carousel.min.js' %}"></script>
+          <script src="{% static 'myapp/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'myapp/js/mail-script.js' %}"></script>
+    <script src="{% static 'myapp/js/main.js' %}"></script>
+  </body>
+</html>
